@@ -8,8 +8,8 @@ function App() {
   const [books] = useState(bookData.books);
   const [user, setUser] = useState(null);
 
-  const handleLogin = () => {
-    setUser('Kalle Anka');
+  const handleLogin = (user) => {
+    setUser((state) => user);
   };
 
   return (

@@ -6,10 +6,14 @@ const Navbar = ({ user, handleLogin }) => {
       <div className="title">Welcome</div>
       {!user && (
         <div className="login">
-          <button onClick={() => handleLogin()}>Log in</button>
+          <button onClick={() => handleLogin('User name')}>Log in</button>
         </div>
       )}
-      {user && <div className="user-info">{user}</div>}
+      {user && (
+        <div onClick={() => handleLogin(null)} className="user-info">
+          {user}
+        </div>
+      )}
     </nav>
   );
 };
