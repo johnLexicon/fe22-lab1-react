@@ -11,12 +11,14 @@ const Book = ({ book }) => {
       <div className="card-title">{book.title}</div>
       <div className="card-author">{book.author}</div>
       <div className="card-body">{book.desc}</div>
-      <button
-        onClick={() => setDarkMode((state) => !state)}
-        className="card-button"
-      >
-        {darkMode ? 'Light' : 'Dark'}
-      </button>
+      <div className="card-footer">
+        <button
+          onClick={() => setDarkMode((state) => !state)}
+          className="card-button"
+        >
+          {darkMode ? 'Light' : 'Dark'}
+        </button>
+      </div>
     </div>
   );
 };

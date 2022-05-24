@@ -20,6 +20,9 @@ h1 {
   max-width: 175px;
   border-radius: 5px;
   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card > * {
@@ -44,6 +47,10 @@ h1 {
   width: 100%;
 }
 
+.card-footer {
+  text-align: right;
+}
+
 .card button {
   border: none;
   outline: none;
@@ -55,4 +62,12 @@ h1 {
 
 .card button:hover {
   background-color: #000;
+}
+
+.card.dark button {
+  background-color: rgb(37, 46, 21);
+}
+
+.card.dark button:hover {
+  background-color: #888;
 }
