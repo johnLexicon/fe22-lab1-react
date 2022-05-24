@@ -1,10 +1,17 @@
 h1 {
   text-align: center;
+  color: coral;
+  padding-top: 1rem;
 }
 
 .books-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.dark {
+  background-color: #444;
+  color: #fff;
 }
 
 .card {
@@ -35,4 +42,17 @@ h1 {
 
 .card-img img {
   width: 100%;
+}
+
+.card button {
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  background-color: darkolivegreen;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background-color: #000;
 }

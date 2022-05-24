@@ -6,13 +6,22 @@ import { useState } from 'react';
 
 function App() {
   const [books] = useState(bookData.books);
+  const [user, setUser] = useState(null);
+
+  const handleLogin = () => {
+    setUser('Kalle Anka');
+  };
 
   return (
     <div className="App">
-      <Navbar user={null} />
-      <div className="container">
-        <BooksCollection books={books} />
-      </div>
+      <Navbar user={user} handleLogin={handleLogin} />
+      {user ? (
+        <div className="container">
+          <BooksCollection books={books} />
+        </div>
+      ) : (
+        <h1>Log in to see the Books Collection</h1>
+      )}
     </div>
   );
 }
