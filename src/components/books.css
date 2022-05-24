@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 .books-wrapper {
   display: flex;
   flex-wrap: wrap;
