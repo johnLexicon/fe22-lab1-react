@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import BooksCollection from './components/BooksCollection';
 import bookData from './data/books';
 import { useState } from 'react';
