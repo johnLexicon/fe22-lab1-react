@@ -1,9 +1,9 @@
 import './navbar.css';
 
-const Navbar = ({ user, handleLogin }) => {
+const Navbar = ({ title, user, handleLogin }) => {
   return (
     <nav>
-      <div className="title">Welcome</div>
+      <div className="title">{title}</div>
       {!user && (
         <div className="login">
           <button onClick={() => handleLogin('User name')}>Log in</button>

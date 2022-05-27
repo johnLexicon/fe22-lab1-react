@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar user={user} handleLogin={handleLogin} />
+      <Navbar title="Welcome" user={user} handleLogin={handleLogin} />
       {user ? (
         <div className="container">
           <BooksCollection books={books} />
