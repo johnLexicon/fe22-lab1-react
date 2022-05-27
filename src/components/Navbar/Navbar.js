@@ -1,4 +1,5 @@
 import './navbar.css';
+import PropTypes from 'prop-types';
 
 const Navbar = ({ title, user, handleLogin }) => {
   return (
@@ -16,6 +17,12 @@ const Navbar = ({ title, user, handleLogin }) => {
       )}
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  user: PropTypes.string,
+  handleLogin: PropTypes.func.isRequired
 };
 
 export default Navbar;
