@@ -19,4 +19,13 @@ describe('Login', () => {
     const bookElements = screen.getAllByTestId('book-card');
     expect(bookElements.length).toBe(bookdata.books.length);
   });
+  it('should render a collection of books without the css-class "dark"', () => {
+    render(<App />);
+    const loginBtnElement = screen.getByRole('button', { name: /Log in/i });
+    fireEvent.click(loginBtnElement);
+    const bookElements = screen.getAllByTestId('book-card');
+    expect(
+      bookElements.every((bookElem) => bookElem.classList.contains('light'))
+    ).toBe(true);
+  });
 });

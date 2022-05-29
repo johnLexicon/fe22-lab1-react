@@ -4,7 +4,10 @@ const Book = ({ book }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div data-testid="book-card" className={'card ' + (darkMode && 'dark')}>
+    <div
+      data-testid="book-card"
+      className={'card ' + (darkMode ? 'dark' : 'light')}
+    >
       <div className="card-img">
         <img src={book.image} alt="Book" />
       </div>
