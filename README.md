@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# FE22 React Laboration 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Functionality
 
-## Available Scripts
+- Navbar
+  Klick on Log in button to show book collection.
+  Klick on User name to "Log out" and hide book collection.
 
-In the project directory, you can run:
+- Book Card
+  Klick on Button to toggle dark/light mode for book card.
+
+## Testing
+
+Unit tests and Integration tests implemented for checking Login functionality, and dark/light mode.
 
 ### `npm start`
 
