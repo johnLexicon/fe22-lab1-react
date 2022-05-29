@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Book from '../Book';
 
 const mockBook = {
@@ -14,5 +14,11 @@ describe('Book tests', () => {
     render(<Book book={mockBook} />);
     const buttonElement = screen.getByRole('button', { name: 'Dark' });
     expect(buttonElement).toBeInTheDocument();
+  });
+  it('should change to dark mode when button clicked', async () => {
+    render(<Book book={mockBook} />);
+    const buttonElement = screen.getByRole('button', { name: 'Dark' });
+    fireEvent.click(buttonElement);
+    expect(await screen.findByTestId('book-card')).toHaveClass('dark');
   });
 });
